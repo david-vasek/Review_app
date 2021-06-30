@@ -1,0 +1,6 @@
+<div class="container">
+    <h1 class="is-size-2">Pokemon</h1>
+
+    ${data.map(pokemon => `
+    <a href="/pokemon/${pokemon.slug}">${pokemon.pokemon_type}: ${pokemon.pokemon_name}</a>` ).join('')}
+</div>

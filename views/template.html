@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title}</title>
+    <!-- <link rel="stylesheet" href="/styles/styles.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <header>
+        <span class="title">
+            PokeRank
+        </span>
+        <ul class="header-menu">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/pokemon">Pokemon</a>
+            </li>
+            ${!!is_logged_in ? `
+            <li>
+                <a href="/users/logout">Logout</a>
+            </li>` : `
+            <li>
+                <a href="/users/login">Login</a>
+            </li>
+            <li>
+                <a href="/users/signup">Sign Up</a>
+            </li>` }
+        </ul>
+    </header>
+    <!-- <img src="/images/softball_wide.png" style="width:100%;"> -->
+    <div class="main">
+        ${body}
+    </div>
+</body>
+
+</html>
